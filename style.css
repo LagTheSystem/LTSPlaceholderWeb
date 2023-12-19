@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-    width: min(400px, 100%);
+    width: min(450px, 100vw);
     height: 100vh;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.3);
@@ -33,4 +33,87 @@ h1, h2 {
     width: 12rem;
     border-radius: 50%;
     margin-bottom: 10px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.socials a {
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 44px;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+}
+
+.socials i {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(200,200,200, 0.05);
+    width: 50px;
+    margin: -12px;
+    height: 50px;
+    border-radius: 25px;
+    transition: 0.2s ease;
+    -webkit-animation: 0.2s ease;
+}
+
+.socials a:hover {
+    transform: scale(1.1);
+}
+
+#yt:hover {
+    background-color: #e4e4e4;
+    color: red;
+}
+
+#yt:hover i {
+    color: white;
+    background-color: red;
+}
+
+#threads:hover, #github:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#twitch:hover {
+    background-color: #160929;
+    color: #7f2aff;
+}
+
+@keyframes please {
+    0% {
+        transform: none;
+    }
+    100% {
+        transform: translateX(120vw) translateY(-70vh) rotateZ(720deg);
+    }
+}
+
+#donate:hover {
+    background-color: #449e32;
+}
+
+#donate h1 {
+    position: absolute;
+    left: -50vw;
+    transition: 0.3s;
+    font-size: 50px;
+}
+
+#donate:hover h1 {
+    animation-name: please;
+    animation-duration: 3s;
 }

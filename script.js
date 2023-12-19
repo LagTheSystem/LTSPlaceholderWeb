@@ -12,7 +12,7 @@ document.onkeydown = function (e) {
     if (keylog.toString().includes("s,p,i,n")) {
         if (still) {
             still = false;
-            setInterval(spin, 25);
+            setInterval(spin, 5);
             spin();
         }
     }
