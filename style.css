@@ -92,6 +92,11 @@ h1, h2 {
     color: #7f2aff;
 }
 
+#twitch:hover i {
+    color: #160929;
+    background-color: #7f2aff;
+}
+
 @keyframes please {
     0% {
         transform: none;
