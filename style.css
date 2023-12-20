@@ -117,3 +117,16 @@ h1, h2 {
     animation-name: please;
     animation-duration: 3s;
 }
+
+@media screen and (max-width: 500px) {
+    #donate h1 {
+        display: none;
+    }
+
+}
+
+@media screen and (max-height: 895px) {
+    .container {
+        height: 100%;
+    }
+}
