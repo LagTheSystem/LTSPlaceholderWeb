@@ -68,26 +68,26 @@ h1, h2 {
     -webkit-animation: 0.2s ease;
 }
 
-.socials a:hover {
+.socials a:hover, .socials a:focus, .socials a:active {
     transform: scale(1.1);
 }
 
-#yt:hover {
+#yt:hover, #yt:focus, #yt:active {
     background-color: #e4e4e4;
     color: red;
 }
 
-#yt:hover i {
+#yt:hover i, #yt:focus i, #yt:active i {
     color: white;
     background-color: red;
 }
 
-#threads:hover, #github:hover {
+#threads:hover, #threads:focus, #threads:active, #github:hover, #github:focus, #github:active {
     background-color: #000;
     color: #fff;
 }
 
-#twitch:hover {
+#twitch:hover, #twitch:focus, #twitch:active {
     background-color: #160929;
     color: #7f2aff;
 }
