@@ -17,3 +17,7 @@ document.onkeydown = function (e) {
         }
     }
 };
+
+function display() {
+    alert("this link doesn't work yet");
+}
