@@ -19,7 +19,7 @@ body {
     width: min(450px, 100vw);
     height: 100vh;
     margin: auto;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.25);
     padding: 40px;
 }
 
@@ -54,7 +54,7 @@ h1, h2 {
     -webkit-transition: 0.2s ease-in-out;
 }
 
-.socials i {
+.socials i, .socials svg {
     float: left;
     display: flex;
     justify-content: center;
@@ -82,9 +82,23 @@ h1, h2 {
     background-color: red;
 }
 
-#threads:hover, #github:hover {
-    background-color: #000;
+#threads:hover {
+    background-color: #000000;
     color: #fff;
+}
+
+#threads:hover i {
+    background-color: #1d1d1d;
+}
+
+#github:hover {
+    background-color: black;
+    color: white;
+}
+
+#github:hover i {
+    background-color: white;
+    color: black;
 }
 
 #twitch:hover {
@@ -95,6 +109,21 @@ h1, h2 {
 #twitch:hover i {
     color: #160929;
     background-color: #7f2aff;
+}
+
+#bluesky:hover {
+    color: #fff;
+    background-color: #1185fe;
+}
+
+#bluesky:hover svg {
+    background-color: #fff;
+    color: #1185fe;
+}
+
+.BSLogo {
+    width: 10px;
+    height: 10px;
 }
 
 @keyframes please {
