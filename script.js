@@ -14,6 +14,11 @@ document.onkeydown = function (e) {
             still = false;
             setInterval(spin, 5);
             spin();
+            keylog = [];
         }
+    }
+    if (keylog.toString().includes("r,i,c,k")) {
+        window.open("https://www.youtube.com/watch?v=uHgt8giw1LY", "_blank");
+        keylog = [];
     }
 };
