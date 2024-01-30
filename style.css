@@ -20,7 +20,7 @@ body {
     height: 100vh;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.25);
-    padding: 40px;
+    padding: 30px 40px 40px 40px;
 }
 
 h1, h2 {
@@ -131,7 +131,7 @@ h1, h2 {
         transform: none;
     }
     100% {
-        transform: translateX(120vw) translateY(-70vh) rotateZ(720deg);
+        transform: translateX(130vw) translateY(-70vh) rotateZ(720deg);
     }
 }
 
@@ -139,21 +139,21 @@ h1, h2 {
     background-color: #449e32;
 }
 
-#donate h1 {
-    position: absolute;
-    left: -50vw;
-    transition: 0.2s;
+#donate::before {
+    content: 'PLEASE';
     font-size: 100px;
+    position: absolute;
+    left: -60vw;
 }
 
-#donate:hover h1 {
+#donate:hover::before {
     animation-name: please;
     animation-duration: 3s;
 }
 
 @media screen and (max-width: 800px) {
-    #donate h1 {
-        display: none;
+    #donate::before {
+        content: '';
     }
 
 }
