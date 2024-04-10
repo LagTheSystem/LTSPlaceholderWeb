@@ -1,5 +1,7 @@
 html {
     height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 body {
@@ -8,6 +10,11 @@ body {
     margin: 0;
     min-height: 100%;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 
 .flex {
     display: flex;
@@ -155,7 +162,6 @@ h1, h2 {
     #donate::before {
         content: '';
     }
-
 }
 
 @media screen and (max-height: 895px) {
