@@ -1,5 +1,5 @@
-@import "css/inter.css";
-@import "css/reset.css";
+@import "ext/inter.css";
+@import "ext/reset.css";
 
 html {
     height: 100%;

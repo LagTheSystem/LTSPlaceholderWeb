@@ -4,7 +4,8 @@
   "description": "This is a placeholder for my website",
   "main": "index.js",
   "scripts": {
-    "postcss:watch": "postcss src/style.css -d public --watch"
+    "postcss:watch": "postcss src/style.css -d public --watch",
+    "donatecss": "postcss src/donate.css -d public --watch"
   },
   "keywords": [],
   "author": "",
