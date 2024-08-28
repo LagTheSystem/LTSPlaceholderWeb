@@ -1,0 +1,174 @@
+@import "css/inter.css";
+@import "css/reset.css";
+
+html {
+    height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body {
+    background-image: linear-gradient(90deg, #ff738e, #da6fe1, #997efa);
+    font-family: Avenir, 'Inter', Montserrat, Corbel, 'URW Gothic', source-sans-pro, 'Noto Sans', sans-serif;
+    margin: 0;
+    min-height: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: min(450px, 100vw);
+    height: 100vh;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 30px 40px 40px 40px;
+}
+
+h1, h2 {
+    font-weight: 500;
+    margin: 5px;
+}
+
+.pfp {
+    width: 12rem;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.socials a {
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 44px;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+}
+
+.socials i, .socials svg {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(200,200,200, 0.05);
+    width: 50px;
+    margin: -12px;
+    height: 50px;
+    border-radius: 25px;
+    transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+}
+
+.socials a:hover {
+    transform: scale(1.1);
+}
+
+#yt:hover {
+    background-color: #e4e4e4;
+    color: red;
+}
+
+#yt:hover i {
+    color: white;
+    background-color: red;
+}
+
+#threads:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+#threads:hover i {
+    background-color: #1d1d1d;
+}
+
+#github:hover {
+    background-color: black;
+    color: white;
+}
+
+#github:hover i {
+    background-color: white;
+    color: black;
+}
+
+#twitch:hover {
+    background-color: #160929;
+    color: #7f2aff;
+}
+
+#twitch:hover i {
+    color: #160929;
+    background-color: #7f2aff;
+}
+
+#bluesky:hover {
+    color: #fff;
+    background-color: #1185fe;
+}
+
+#bluesky:hover svg {
+    background-color: #fff;
+    color: #1185fe;
+}
+
+.BSLogo {
+    width: 10px;
+    height: 10px;
+}
+
+@keyframes please {
+    0% {
+        transform: none;
+    }
+    100% {
+        transform: translateX(130vw) translateY(-70vh) rotateZ(720deg);
+    }
+}
+
+#donate:hover {
+    background-color: #449e32;
+}
+
+#donate::before {
+    content: 'PLEASE';
+    font-size: 100px;
+    position: absolute;
+    left: -60vw;
+}
+
+#donate:hover::before {
+    animation-name: please;
+    animation-duration: 3s;
+}
+
+@media screen and (max-width: 800px) {
+    #donate::before {
+        content: '';
+    }
+}
+
+@media screen and (max-height: 895px) {
+    .container {
+        height: 100%;
+    }
+}
