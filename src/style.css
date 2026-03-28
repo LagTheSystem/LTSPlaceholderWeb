@@ -1,6 +1,20 @@
 @import "ext/inter.css";
 @import "ext/reset.css";
 
+:root {
+    --bg-start: #ff738e;
+    --bg-mid: #da6fe1;
+    --bg-end: #997efa;
+    --text-strong: #16121f;
+    --text-muted: #332a46;
+    --surface: rgba(255, 255, 255, 0.2);
+    --surface-border: rgba(255, 255, 255, 0.36);
+    --chip: rgba(255, 255, 255, 0.15);
+    --shadow-lg: 0 24px 56px rgba(18, 10, 34, 0.26);
+    --radius-lg: 28px;
+    --radius-pill: 999px;
+}
+
 html {
     height: 100%;
     scrollbar-width: none;
@@ -8,16 +22,17 @@ html {
 }
 
 body {
-    background-image: linear-gradient(90deg, #ff738e, #da6fe1, #997efa);
+    background-image: linear-gradient(110deg, var(--bg-start) 0%, var(--bg-mid) 52%, var(--bg-end) 100%);
     font-family: Avenir, 'Inter', Montserrat, Corbel, 'URW Gothic', source-sans-pro, 'Noto Sans', sans-serif;
+    color: var(--text-strong);
     margin: 0;
     min-height: 100%;
+    display: flex;
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
-
 
 .flex {
     display: flex;
@@ -26,65 +41,98 @@ body {
 }
 
 .container {
-    width: min(450px, 100vw);
-    height: 100vh;
+    width: min(500px, 100%);
     margin: auto;
-    background-color: rgba(0, 0, 0, 0.25);
-    padding: 30px 40px 40px 40px;
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.38), var(--surface));
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 30px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: relative;
+    z-index: 1;
 }
 
 h1, h2 {
-    font-weight: 500;
-    margin: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(2rem, 7vw, 2.65rem);
+    font-weight: 750;
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    font-size: clamp(1rem, 3vw, 1.18rem);
+    font-weight: 600;
+    margin-top: 8px;
+    color: var(--text-muted);
+}
+
+.header p {
+    margin: 12px 0 0;
+    text-align: center;
+    max-width: 30ch;
+    color: var(--text-muted);
 }
 
 .pfp {
     width: 12rem;
     max-width: 100%;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
+    border: 4px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 26px rgba(22, 8, 41, 0.26);
 }
 
 .socials {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 26px;
+    gap: 12px;
 }
 
 .socials a {
-    color: black;
+    color: var(--text-strong);
     text-decoration: none;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.05);
+    padding: 14px 18px;
+    background-color: rgba(255, 255, 255, 0.32);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    box-shadow: 0 8px 18px rgba(13, 5, 31, 0.13);
     width: 100%;
-    margin: 10px 0;
-    text-align: center;
-    border-radius: 44px;
-    transition: 0.2s ease-in-out;
-    -webkit-transition: 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: transform 0.24s ease, box-shadow 0.24s ease, background-color 0.24s ease, color 0.24s ease;
 }
 
 .socials i, .socials svg {
-    float: left;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(200,200,200, 0.05);
-    width: 50px;
-    margin: -12px;
-    height: 50px;
+    background-color: var(--chip);
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
     border-radius: 25px;
-    transition: 0.2s ease;
-    -webkit-transition: 0.2s ease;
+    transition: background-color 0.24s ease, color 0.24s ease;
 }
 
 .socials a:hover {
-    transform: scale(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px rgba(13, 5, 31, 0.2);
 }
 
 #yt:hover {
-    background-color: #e4e4e4;
+    background-color: #f8f8f8;
     color: red;
 }
 
@@ -133,43 +181,40 @@ h1, h2 {
 }
 
 .BSLogo {
-    width: 10px;
-    height: 10px;
-}
-
-@keyframes please {
-    0% {
-        transform: none;
-    }
-    100% {
-        transform: translateX(130vw) translateY(-70vh) rotateZ(720deg);
-    }
+    width: 16px;
+    height: 16px;
 }
 
 #donate:hover {
-    background-color: #449e32;
+    background-color: #45a140;
+    color: #fff;
 }
 
-#donate::before {
-    content: 'PLEASE';
-    font-size: 100px;
-    position: absolute;
-    left: -60vw;
-}
+@media screen and (max-width: 520px) {
+    .container {
+        padding: 24px 18px;
+        border-radius: 24px;
+    }
 
-#donate:hover::before {
-    animation-name: please;
-    animation-duration: 3s;
-}
+    .pfp {
+        width: 9.75rem;
+    }
 
-@media screen and (max-width: 800px) {
-    #donate::before {
-        content: '';
+    .socials {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .socials a {
+        padding: 12px 14px;
+        font-size: 0.95rem;
     }
 }
 
-@media screen and (max-height: 895px) {
-    .container {
-        height: 100%;
+@media (prefers-reduced-motion: reduce) {
+    .socials a,
+    .socials i,
+    .socials svg {
+        transition: none;
     }
 }
