@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postcss:watch": "postcss src/style.css -d public --watch",
-    "donatecss": "postcss src/donate.css -d public --watch",
-    "build": "postcss src/style.css -d public && postcss src/donate.css -d public"
+    "build": "postcss src/style.css -d public"
   },
   "keywords": [],
   "author": "",
